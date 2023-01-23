@@ -66,7 +66,6 @@ func toNestedJson(patch jsondiff.Patch) JsonMap {
 	return jsonMap
 }
 
-
 func jsonFromHcl2Files(files []string) JsonMap {
 	var merged JsonMap
 	for _, file := range files {
@@ -89,7 +88,7 @@ func Hcl2DiffPatch(oldHcl2Files, newHcl2Files []string) jsondiff.Patch {
 func Hcl2DiffJsonMap(oldHcl2Files, newHcl2Files []string) JsonMap {
 	patch := Hcl2DiffPatch(oldHcl2Files, newHcl2Files)
 	jsonPatch := toNestedJson(patch)
-  return jsonPatch
+	return jsonPatch
 }
 
 func Hcl2DiffJson(oldHcl2Files, newHcl2Files []string) []byte {

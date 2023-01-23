@@ -33,7 +33,7 @@ func InitWorkdirPath(tmpWorkdir string) string {
 func InitWorkdir() string {
 	wd := getWd()
 	tmpWorkdir := filepath.Join(wd, ".temp_hcl2diff")
-  return InitWorkdirPath(tmpWorkdir)
+	return InitWorkdirPath(tmpWorkdir)
 }
 
 func GetFiles(srcToGet, workdir, target string, extensions []string) []string {
